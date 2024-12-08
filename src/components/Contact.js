@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../constant/CommonUntility";
+import { showSuccessToast } from "../constant/Toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -62,6 +63,7 @@ const Contact = () => {
       message: "",
     });
     setSubmitted(true);
+    showSuccessToast('Form submitted successfully');
 
     // Reset form data
     setFormData({
